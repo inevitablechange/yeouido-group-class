@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>업무 자동화 AI 활용법 (여의도팀)</title>
+<meta name="description" content="업무 자동화 AI 활용법 그룹 원데이클래스 강의 자료. 프롬프트는 복사 버튼으로 가져가세요.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-title="업무 자동화 AI 활용법">
+<div id="progress"></div>
+<main id="deck">
+<div class="frame"><section class="slide" data-p="" data-section="시작" data-title="표지">
+  <img class="cover-mascot" src="images/cover-mascot.png" alt="" width="420">
+  <p class="path">AI with Paul · 여의도팀 그룹수업</p>
+  <h1 style="font-size:100px;margin-top:70px">업무 자동화<br>AI 활용법</h1>
+  <p class="lead">Claude 기초부터 매일 도는 자동화, 어사이드, 나만의 업무 도구까지</p>
+  <div class="cols c3" style="margin-top:96px">
+    <div class="card"><h3>화면은 같이 보며</h3><p class="small sub">강의 화면을 같이 보면서 따라와요.</p></div>
+    <div class="card"><h3>프롬프트는 복사로</h3><p class="small sub">글자 위 노란 버튼을 누르면 바로 복사돼요.</p></div>
+    <div class="card"><h3>막히면 바로 손 들기</h3><p class="small sub">혼자 끙끙대지 말고 바로 물어봐 주세요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>1</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="시작" data-title="강사 소개">
+  <p class="path">강사 소개</p>
+  <h1>최용호</h1>
+  <p class="lead">마케터, 개발자를 거쳐 지금은 기획자로 일해요.</p>
+  <div class="cols mt" style="grid-template-columns: 1fr 400px; gap: 64px; align-items: start">
+    <div>
+      <div class="stack">
+        <div class="card"><h3>개발에 진심이에요</h3><p class="small">매주 새로운 앱이나 자동화 프로세스를 하나씩 만들 만큼 개발을 좋아해요.</p></div>
+        <div class="card"><h3>실무를 두루 겪었어요</h3><p class="small">마케터, 개발자, 기획자를 거치며 실무 전반을 봐 왔어요.</p></div>
+      </div>
+      <p class="mt small sub">제가 재미를 느끼는 만큼 여러분도 AI를 즐겁게 쓰면 좋겠어서 이 강의를 만들었어요.</p>
+    </div>
+    <div>
+      <img class="photo" src="images/instructor.jpg" alt="노트북 앞에서 턱을 괴고 화면을 보는 강사" width="400" height="419">
+      <p class="shot-cap center">10kg 증량 전 사진</p>
+    </div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>2</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="시작" data-title="오늘 할 일">
+  <p class="path">오늘 할 일</p>
+  <h1>오늘은 네 가지를 해요</h1>
+  <div class="cols c2 mt-l">
+    <div class="card p1 edge-l"><h3 class="ac">① Claude 기초와 세팅</h3><p class="small sub">처음 쓰는 분도 오늘 실습을 따라올 수 있게 기본부터 맞춰요.</p></div>
+    <div class="card p2 edge-l"><h3 class="ac">② 매일 카톡으로 오는 알림</h3><p class="small sub">관심 종목 시세와 뉴스를 매일 아침 카톡으로 받아요.</p></div>
+    <div class="card p3 edge-l"><h3 class="ac">③ 어사이드</h3><p class="small sub">내가 로그인해 둔 사이트를 AI가 대신 확인해요.</p></div>
+    <div class="card p1 edge-l"><h3 class="ac">④ 나만의 업무 도구</h3><p class="small sub">가계부, 일정 계산처럼 필요한 도구를 말로 만들어요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>3</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="검색과 생성형 AI">
+  <p class="path">기초 개념</p>
+  <h1>Claude는 대화하면서 일을 맡기는 AI예요</h1>
+  <div class="cols c2 mt-l">
+    <div class="card"><h3>검색은</h3><p>이미 있는 글을 찾아서 링크로 보여줘요. 읽고 정리하는 건 내 몫이에요.</p></div>
+    <div class="card tint p1"><h3 class="ac">Claude는</h3><p>내 상황을 듣고 그 자리에서 글·분석·프로그램을 새로 만들어 줘요.</p></div>
+  </div>
+  <p class="mt-l sub">완벽하진 않아요. 숫자·가격·법률처럼 중요한 정보는 꼭 한 번 더 확인해요.</p>
+<div class="foot"><span>AI with Paul</span><span>4</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="대표적인 생성형 AI 세 가지">
+  <p class="path">기초 개념</p>
+  <h1>생성형 AI는 여러 개예요, 오늘은 Claude로</h1>
+  <p class="lead">이메일 작성, 요약, 아이디어 정리는 셋 다 할 수 있지만 강점은 달라요.</p>
+  <div class="cols c3 mt-l">
+    <div class="card tint p1"><h3 class="ac">Claude</h3><p class="small">자연스러운 문체, 긴 문서 분석, 코딩에 강해요. 오늘 이걸로 실습해요.</p></div>
+    <div class="card"><h3>ChatGPT</h3><p class="small">범용성이 좋고 이미지 생성, 음성 대화도 돼요.</p></div>
+    <div class="card"><h3>Gemini</h3><p class="small">구글 서비스와 잘 묶이고 최신 검색 정보를 잘 가져와요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>5</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="화면 둘러보기">
+  <p class="path">기초 · 세팅</p>
+  <h1>화면 네 곳만 알면 돼요</h1>
+  <div class="cols c2 mt-l">
+    <div class="card"><h3>채팅창</h3><p class="small">질문과 자료를 자유롭게 입력하는 기본 대화 공간이에요.</p></div>
+    <div class="card tint p2"><h3 class="ac">프로젝트</h3><p class="small">같은 주제의 대화·파일·지침을 한곳에 모아요.</p></div>
+    <div class="card"><h3>Artifacts</h3><p class="small">문서·표·웹 화면 결과물을 별도 창에서 보여줘요. 오늘 업무 도구도 여기서 만들어요.</p></div>
+    <div class="card"><h3>코워크</h3><p class="small">내 컴퓨터에서 직접 일하고, 정해진 시간에 알아서 돌게 할 수 있어요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>6</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="이름과 지침 세팅">
+  <p class="path">기초 · 세팅 · 프롬프트</p>
+  <h1>내 이름과 지침을 먼저 세팅해요</h1>
+  <p class="lead">한 번만 적어 두면 앞으로의 모든 대화에 자동으로 적용돼요.</p>
+  <ol class="steps mt">
+    <li>왼쪽 아래 <b>내 이름</b>을 눌러 <b>설정</b>을 열어요.</li>
+    <li>검색창에 <b>지침</b>을 입력하고, 개인 맞춤 지침 칸을 열어요.</li>
+    <li>아래 프롬프트를 붙여 넣고 내 상황에 맞게 고친 뒤 저장해요.</li>
+  </ol>
+  <div class="prompt sm mt"><div class="prompt-head"><span>Claude 지침용</span><button class="copy" type="button" aria-label="Claude 지침용 프롬프트 복사">복사</button></div><pre>나는 [하는 일]을 하고 있어.
+답변은 존댓말로, 결론부터 짧게 써줘.</pre></div>
+<div class="foot"><span>AI with Paul</span><span>7</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="모델과 토큰">
+  <p class="path">기초 · 세팅</p>
+  <h1>모델은 Sonnet으로, 사용량은 토큰으로 쌓여요</h1>
+  <div class="cols c3 mt">
+    <div class="card"><h3>Haiku</h3><p class="small">가벼운 질문에 빠르게 답해요.</p></div>
+    <div class="card tint p2"><h3 class="ac">Sonnet</h3><p class="small">가장 무난해요. 오늘 실습은 전부 이걸로 해요.</p></div>
+    <div class="card"><h3>Opus</h3><p class="small">깊은 추리가 필요한 어려운 작업에 써요.</p></div>
+  </div>
+  <p class="mt-l"><b>토큰</b>은 AI가 글을 읽고 쓰는 작은 조각이에요. 조각 수만큼 사용량이 쌓이고, 남은 양은 설정의 사용량 메뉴에서 볼 수 있어요.</p>
+<div class="foot"><span>AI with Paul</span><span>8</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="시작 전 확인">
+  <p class="path">준비</p>
+  <h1>시작 전에 네 가지만 확인해요</h1>
+  <ul class="checks compact mt" data-id="prep">
+    <li><span class="box">✓</span><div><b>Claude 데스크톱 앱 설치, Pro 이상 구독</b><span>코워크와 예약은 데스크톱 앱에서만 돼요. 아이패드로는 안 돼요.</span></div></li>
+    <li><span class="box">✓</span><div><b>카카오톡 로그인</b><span>자동화 실습 결과를 카톡 '나에게'로 받아요.</span></div></li>
+    <li><span class="box">✓</span><div><b>어사이드 설치</b><span><a href="https://aside.com/download" target="_blank" rel="noopener"><code>aside.com/download</code></a> 에서 Mac·Windows용을 받아요.</span></div></li>
+    <li><span class="box">✓</span><div><b>내가 만들고 싶은 도구 하나</b><span>가계부, 일정 계산처럼 평소 손으로 하던 일 하나를 떠올려 둬요.</span></div></li>
+  </ul>
+<div class="foot"><span>AI with Paul</span><span>9</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="대화하며 다듬기">
+  <p class="path">Claude와 대화하기 · 프롬프트</p>
+  <h1>한 번에 끝내지 말고 대화하며 다듬어요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>첫 질문 해보기</span><button class="copy" type="button" aria-label="첫 질문 해보기 프롬프트 복사">복사</button></div><pre>내 업무 중에 AI로 자동화하면 좋은 일 5개를 추천해줘.
+나는 [하는 일]을 하고 있어.</pre></div>
+  <div class="cols c2 mt">
+    <div class="card"><h3>마음에 안 들면</h3><p class="small">"3번을 더 구체적으로", "매일 반복하는 일만 다시"처럼 이어서 말해요.</p></div>
+    <div class="card tint p1"><h3 class="ac">모르는 게 있으면</h3><p class="small">"그건 어떻게 하는 거야?"라고 그대로 물어봐요. 대화가 이어질수록 결과가 좋아져요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>10</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="기초" data-title="프로젝트와 지침">
+  <p class="path">Claude와 대화하기 · 프로젝트</p>
+  <h1>자주 하는 일은 프로젝트로 묶어요</h1>
+  <ol class="steps mt">
+    <li>왼쪽 메뉴 <b>프로젝트</b> → <b>새 프로젝트</b>를 눌러요.</li>
+    <li>이름을 정하고(예: <code>업무 자동화</code>), 관련 파일이 있으면 끌어다 놓아요.</li>
+    <li><b>지침</b> 칸에 이 프로젝트에서만 지킬 규칙을 적어요.</li>
+  </ol>
+  <div class="prompt sm mt"><div class="prompt-head"><span>프로젝트 지침 예시</span><button class="copy" type="button" aria-label="프로젝트 지침 예시 프롬프트 복사">복사</button></div><pre>이 프로젝트는 내 업무 자동화 아이디어를 정리하는 곳이야.
+답은 표로 정리하고, 모르는 건 지어내지 말고 모른다고 해줘.</pre></div>
+<div class="foot"><span>AI with Paul</span><span>11</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="실습 1 한눈에 보기">
+  <p class="path">실습 1 · 매일 카톡으로 오는 알림</p>
+  <h1>관심 종목 소식을 매일 아침 카톡으로 받아요</h1>
+  <p class="lead">관심 종목의 시세와 뉴스를 찾아 요약하고, 매일 아침 저절로 카톡으로 오게 해요.</p>
+  <div class="flow mt-l">
+    <div class="node"><b>커넥터</b>카카오톡을 연결해 결과를 받아요</div>
+    <div class="arrow">›</div>
+    <div class="node"><b>스킬</b>알림 기준과 양식을 저장해요</div>
+    <div class="arrow">›</div>
+    <div class="node"><b>예약</b>매일 아침 자동으로 돌려요</div>
+  </div>
+  <p class="mt-l sub">주식이 아니어도 돼요. [ ] 칸을 관심 분야(업계 뉴스, 경쟁사 소식 등)로 바꾸면 같은 방법으로 만들어져요.</p>
+<div class="foot"><span>AI with Paul</span><span>12</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="커넥터로 카톡 연결하기">
+  <p class="path">실습 1 · 1-1 커넥터</p>
+  <h1>커넥터는 외부 서비스로 가는 통로예요</h1>
+  <p class="lead">연결해 두면 Claude가 카카오톡 '나에게 보내기'를 직접 써요.</p>
+  <ol class="steps mt">
+    <li>Claude의 <b>커넥터</b> 메뉴에서 <b>PlayMCP</b>를 연결해요.</li>
+    <li>브라우저에서 <a href="https://playmcp.kakao.com/" target="_blank" rel="noopener"><code>playmcp.kakao.com</code></a>에 접속해요.</li>
+    <li><b>카카오톡 나챗방</b>을 구독함에 추가해요.</li>
+  </ol>
+  <p class="mt sub">연결해도 그 서비스의 모든 기능을 쓰는 건 아니에요. 내가 허용한 범위 안에서만 움직여요.</p>
+<div class="foot"><span>AI with Paul</span><span>13</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="연결 확인하기">
+  <p class="path">실습 1 · 1-1 커넥터 · 프롬프트</p>
+  <h1>연결이 잘 됐는지 보내 봐요</h1>
+  <p class="lead" style="font-size:36px">코워크 탭에서 새 작업을 열고 보내요.</p>
+  <div class="prompt sm mt"><div class="prompt-head"><span>1-1 연결 확인</span><button class="copy" type="button" aria-label="1-1 연결 확인 프롬프트 복사">복사</button></div><pre>카카오톡 나에게 "연결 완료"라고 한 번 보내줘.</pre></div>
+  <p class="prompt-note">카톡에 "연결 완료"가 오면 성공이에요.</p>
+<div class="foot"><span>AI with Paul</span><span>14</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="스킬이란">
+  <p class="path">실습 1 · 1-2 스킬</p>
+  <h1>스킬은 업무 방식을 적어 둔 지침서예요</h1>
+  <p class="lead">한 번 저장하면 다음부터 Claude가 그 규칙대로 처리해요.</p>
+  <div class="cols c2 mt-l">
+    <div class="card"><h3>스킬이 없으면</h3><p>"어떤 종목을, 어떤 순서로, 몇 줄로…" 매번 처음부터 다시 말해야 해요.</p></div>
+    <div class="card tint p2"><h3 class="ac">스킬이 있으면</h3><p>이름만 부르면 돼요. 볼 종목, 양식, 보낼 곳까지 이미 들어 있어요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>15</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="알림 기준 정하기">
+  <p class="path">실습 1 · 1-2 스킬 · 프롬프트 ①</p>
+  <h1>먼저 어떤 내용을 받을지 정해요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>1-2 ① 알림 기준 정하기</span><button class="copy" type="button" aria-label="1-2 ① 알림 기준 정하기 프롬프트 복사">복사</button></div><pre>[관심 종목 2~3개]의 어제 종가와 관련 뉴스를 웹에서 찾아 정리해줘.
+종목마다 세 줄 이내로, 출처 링크를 붙이고 투자 추천은 하지 마.</pre></div>
+  <p class="prompt-note">결과를 보고 "뉴스는 하나씩만", "등락률도 같이"처럼 한두 번 고친 뒤 다음으로 넘어가요.</p>
+<div class="foot"><span>AI with Paul</span><span>16</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="스킬로 저장하기">
+  <p class="path">실습 1 · 1-2 스킬 · 프롬프트 ②</p>
+  <h1>확정한 기준을 스킬로 저장해요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>1-2 ② 스킬로 저장하기</span><button class="copy" type="button" aria-label="1-2 ② 스킬로 저장하기 프롬프트 복사">복사</button></div><pre>방금 기준을 stock-brief 스킬로 저장해줘.
+실행하면 결과를 카카오톡 나에게 보내게 해줘.</pre></div>
+  <p class="prompt-note">스킬을 저장하겠냐는 창이 뜨면 '저장'을 눌러요. 입력창에 / 를 쳤을 때 <code>stock-brief</code>가 보이면 성공이에요.</p>
+<div class="foot"><span>AI with Paul</span><span>17</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="예약 만들기">
+  <p class="path">실습 1 · 1-3 예약 · 프롬프트</p>
+  <h1>스킬에 시간만 붙이면 매일 돌아요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>1-3 매일 아침 예약 만들기</span><button class="copy" type="button" aria-label="1-3 매일 아침 예약 만들기 프롬프트 복사">복사</button></div><pre>stock-brief 스킬로 평일 오전 8시 예약을 만들어줘.
+등록하고 나서 다음 실행 시각을 보여줘.</pre></div>
+  <p class="prompt-note">등록한 뒤 예약 목록에서 <b>지금 실행</b>을 눌러 카톡이 오는지 바로 확인해요.</p>
+  <div class="card mt"><p class="small" style="margin:0"><b>예약 시각에 컴퓨터가 켜져 있고 Claude 앱이 열려 있어야 돌아요.</b> 노트북은 덮개를 닫지 마세요.</p></div>
+<div class="foot"><span>AI with Paul</span><span>18</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="결과물 예시">
+  <p class="path">실습 1 · 결과물 예시</p>
+  <h1>매일 아침 카톡에 이렇게 와요</h1>
+  <div class="cols c2 mt" style="grid-template-columns: 1.2fr 1fr; align-items:start">
+    <div class="mock p2" style="position:relative">
+      <span class="tag">카카오톡 · 나와의 채팅</span>
+      <h4>[관심 종목 브리핑] 11월 27일 (목)</h4>
+      <h5>1. ○○전자 — 어제 종가 ○○,○○○원 (+0.0%)</h5>
+      <ul><li>뉴스: 한 줄 요약</li><li>출처: 언론사 · 링크</li></ul>
+      <h5>2~3. 같은 모양으로</h5>
+    </div>
+    <ul class="checks compact" data-id="cp-alarm">
+      <li><span class="box">✓</span><div><b>카톡이 왔어요</b><span>'지금 실행'으로 결과가 도착해요.</span></div></li>
+      <li><span class="box">✓</span><div><b>숫자가 맞아요</b><span>증권 앱 숫자와 한 번 비교해 봐요.</span></div></li>
+      <li><span class="box">✓</span><div><b>예약이 들어갔어요</b><span>예약 목록에 평일 오전 8시로 보여요.</span></div></li>
+    </ul>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>19</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="1" data-section="① 매일 카톡 알림" data-title="되는 것과 안 되는 것">
+  <p class="path">실습 1 · 정리</p>
+  <h1>주식 알림, 어디까지 될까요</h1>
+  <div class="cols c2 mt">
+    <div class="card tint p2"><h3 class="ac">예약으로 되는 것</h3><ul class="list tight small" style="margin:0"><li>정해진 시간에 공개된 시세·뉴스 정리</li><li>카톡으로 요약 받기</li><li>관심 종목 바꾸기(스킬만 고치면 돼요)</li></ul></div>
+    <div class="card"><h3>예약으로 안 되는 것</h3><ul class="list tight small" style="margin:0"><li>가격이 얼마가 되는 순간 바로 알림 — 따로 프로그램을 만들어야 해요</li><li>장중 실시간 시세 — 웹 검색 결과라 늦을 수 있어요</li><li>증권사 계좌처럼 로그인한 화면 — 다루지 않는 게 안전해요</li></ul></div>
+  </div>
+  <p class="mt sub">투자 판단은 직접 해요. AI 요약은 참고용이에요.</p>
+<div class="foot"><span>AI with Paul</span><span>20</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="② 어사이드" data-title="어사이드가 뭔지">
+  <p class="path">실습 2 · 어사이드</p>
+  <h1>어사이드는 내 로그인 상태 그대로 일하는 AI 브라우저예요</h1>
+  <div class="cols c2 mt">
+    <div class="card"><h3>보통 AI는</h3><p class="small">로그인해야 보이는 화면(메일, 사내 시스템, 관심종목 목록)은 못 들어가요.</p></div>
+    <div class="card tint p3"><h3 class="ac">어사이드는</h3><p class="small">내가 로그인해 둔 사이트에 그대로 들어가서 확인하고, 클릭하고, 정리해요.</p></div>
+  </div>
+  <ul class="list tight small mt">
+    <li>Mac·Windows용 브라우저예요. 크롬처럼 쓰면서 옆에 AI가 붙어 있어요.</li>
+    <li>무료 플랜으로 오늘 실습을 다 할 수 있어요(월 500크레딧, 예약 3개).</li>
+    <li>결제·전송처럼 민감한 동작은 실행 전에 나한테 확인받아요.</li>
+  </ul>
+<div class="foot"><span>AI with Paul</span><span>21</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="② 어사이드" data-title="설치하고 로그인하기">
+  <p class="path">실습 2 · 2-1 시작하기</p>
+  <h1>설치하고 자주 쓰는 사이트에 로그인해요</h1>
+  <ol class="steps mt">
+    <li><a href="https://aside.com/download" target="_blank" rel="noopener"><code>aside.com/download</code></a>에서 받아 설치하고, 첫 화면 안내를 따라가요.</li>
+    <li>어사이드 안에서 평소 쓰는 사이트(네이버, 메일 등)에 <b>직접 로그인</b>해요.</li>
+    <li>비밀번호는 AI에게 알려주지 않아요. 로그인은 항상 내가 해요.</li>
+  </ol>
+  <p class="mt sub">화면이 다르게 보이면 손을 들어 주세요. 메뉴 위치가 업데이트로 바뀌었을 수 있어요.</p>
+<div class="foot"><span>AI with Paul</span><span>22</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="② 어사이드" data-title="대신 확인시키기">
+  <p class="path">실습 2 · 2-2 시켜보기 · 프롬프트</p>
+  <h1>로그인한 사이트에서 대신 확인해 달라고 해요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>2-2 대신 확인시키기</span><button class="copy" type="button" aria-label="2-2 대신 확인시키기 프롬프트 복사">복사</button></div><pre>[로그인해 둔 사이트]에 들어가서 [확인할 내용]을 찾아 정리해줘.
+아무것도 바꾸거나 보내지 말고 보기만 해줘.</pre></div>
+  <div class="cols c2 mt">
+    <div class="card"><h3>시연 예시</h3><p class="small">"네이버 증권 내 관심종목에 들어가서 오늘 많이 오른 순으로 정리해줘"</p></div>
+    <div class="card"><h3>각자 해보기</h3><p class="small">평소 로그인해서 확인하는 사이트 하나로 시켜 봐요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>23</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="② 어사이드" data-title="루틴으로 예약하기">
+  <p class="path">실습 2 · 2-3 루틴</p>
+  <h1>반복할 일은 루틴(Routines)으로 예약해요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>2-3 루틴 만들기</span><button class="copy" type="button" aria-label="2-3 루틴 만들기 프롬프트 복사">복사</button></div><pre>방금 한 일을 매일 오전 9시에 하는 루틴으로 만들어줘.</pre></div>
+  <ul class="list tight small mt">
+    <li>무료 플랜은 루틴 3개까지예요.</li>
+    <li>어사이드는 내 컴퓨터에서 도는 브라우저라 <b>컴퓨터가 켜져 있어야</b> 루틴이 돌아요.</li>
+    <li>결과를 폰으로 받으려면 유료(Pro) 플랜에서 텔레그램·슬랙을 연결해요. 카톡으로는 안 와요.</li>
+  </ul>
+<div class="foot"><span>AI with Paul</span><span>24</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="2" data-section="② 어사이드" data-title="코워크 예약과 어사이드">
+  <p class="path">실습 2 · 정리</p>
+  <h1>언제 뭘 쓰면 될까요</h1>
+  <table class="t mt" style="font-size:30px">
+    <thead><tr><th></th><th>코워크 예약</th><th>어사이드 루틴</th></tr></thead>
+    <tbody>
+      <tr><td>잘하는 일</td><td>공개된 정보 찾기, 파일 정리</td><td>로그인해야 보이는 화면 확인·조작</td></tr>
+      <tr><td>결과 받기</td><td>카톡으로 보내기 쉬워요</td><td>어사이드 안에서 확인(폰 알림은 Pro)</td></tr>
+      <tr><td>예시</td><td>관심 종목 뉴스 브리핑</td><td>관심종목 목록, 메일·사내 시스템 확인</td></tr>
+    </tbody>
+  </table>
+  <p class="mt sub">둘 다 컴퓨터가 켜져 있어야 돌아요.</p>
+<div class="foot"><span>AI with Paul</span><span>25</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="3" data-section="③ 나만의 업무 도구" data-title="업무 시스템 구경하기">
+  <p class="path">실습 3 · 업무 시스템 구경하기</p>
+  <h1>이런 업무 시스템도 말로 만들 수 있어요</h1>
+  <p class="lead">제가 실제로 쓰는 학생·일정 관리 화면을 직접 보여드릴게요.</p>
+  <div class="cols c3 mt-l">
+    <div class="card"><h3>말로 설명해서 만든 것</h3><p class="small">코드를 몰라도 "이런 화면이 필요해"라고 말해서 만들었어요.</p></div>
+    <div class="card"><h3>바로 고칠 수 있는 것</h3><p class="small">일하는 방식이 바뀌면 그 자리에서 다시 말해서 고쳐요.</p></div>
+    <div class="card"><h3>오늘 배운 방식 그대로</h3><p class="small">대화로 다듬고, 반복은 예약에 맡기는 방식이에요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>26</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="3" data-section="③ 나만의 업무 도구" data-title="이런 것도 만들 수 있어요">
+  <p class="path">실습 3 · 아이디어</p>
+  <h1>평소 손으로 하던 일이 도구가 돼요</h1>
+  <div class="cols c3 mt-l">
+    <div class="card tint p1"><h3 class="ac">자동 가계부</h3><p class="small">금액과 항목만 입력하면 날짜별로 쌓이고, 월별 합계가 저절로 나와요.</p></div>
+    <div class="card tint p2"><h3 class="ac">일정 자동 계산</h3><p class="small">시작일과 단계별 기간을 넣으면 마감일과 주말 제외 일정이 계산돼요.</p></div>
+    <div class="card tint p3"><h3 class="ac">주식 알림</h3><p class="small">오늘 만든 예약 알림에서 더 나가면, 가격 조건 알림 프로그램도 만들 수 있어요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>27</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="3" data-section="③ 나만의 업무 도구" data-title="직접 만들어 보기">
+  <p class="path">실습 3 · 3-1 만들기 · 프롬프트</p>
+  <h1>내가 쓸 도구를 하나 만들어요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>3-1 업무 도구 만들기</span><button class="copy" type="button" aria-label="3-1 업무 도구 만들기 프롬프트 복사">복사</button></div><pre>[만들고 싶은 도구]를 웹 화면으로 만들고 싶어.
+바로 만들지 말고 필요한 걸 먼저 하나씩 물어봐줘.</pre></div>
+  <p class="prompt-note">예: "금액을 입력하면 자동으로 쌓이는 가계부", "시작일과 기간을 넣으면 마감일이 나오는 일정 계산기". 질문에 답하고 나면 Artifacts 창에 화면이 생겨요.</p>
+<div class="foot"><span>AI with Paul</span><span>28</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="3" data-section="③ 나만의 업무 도구" data-title="구체적으로 고쳐 달라고 하기">
+  <p class="path">실습 3 · 3-2 고치기 · 프롬프트</p>
+  <h1>고칠 곳은 캡처하고 구체적으로 말해요</h1>
+  <div class="prompt sm mt"><div class="prompt-head"><span>3-2 고쳐 달라고 하기</span><button class="copy" type="button" aria-label="3-2 고쳐 달라고 하기 프롬프트 복사">복사</button></div><pre>(캡처 첨부) 이 화면에서 [어디]를 [어떻게] 바꿔줘.
+다른 부분은 그대로 둬.</pre></div>
+  <div class="cols c2 mt">
+    <div class="card"><h3>이렇게 말하면 헤매요</h3><p class="small">"좀 이상해", "전체적으로 다시"</p></div>
+    <div class="card tint p1"><h3 class="ac">이렇게 말하면 바로 고쳐요</h3><p class="small">"합계 숫자를 2배 크게, 맨 위로 올려줘"</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>29</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="마무리" data-title="하네스 설정">
+  <p class="path">한 걸음 더 · 경험자용</p>
+  <h1>하네스 설정은 Claude Code에 미리 규칙을 깔아 두는 거예요</h1>
+  <p class="lead">매번 말로 하던 규칙을 파일로 두면, 매번 같은 방식으로 일해요.</p>
+  <table class="t mt" style="font-size:28px">
+    <thead><tr><th>설정</th><th>하는 일</th><th>예시</th></tr></thead>
+    <tbody>
+      <tr><td><code>CLAUDE.md</code></td><td>이 폴더에서 지킬 규칙</td><td>"원본 파일은 수정하지 마"</td></tr>
+      <tr><td>스킬</td><td>자주 하는 일의 절차</td><td>오늘 만든 stock-brief</td></tr>
+      <tr><td>훅(Hooks)</td><td>정해진 순간에 꼭 실행할 명령</td><td>작업이 끝나면 자동으로 검사</td></tr>
+      <tr><td>권한</td><td>허락 없이 못 하는 일</td><td>파일 삭제는 항상 물어보기</td></tr>
+    </tbody>
+  </table>
+  <p class="mt sub">규칙과 스킬은 Claude가 판단해서 따르고, 훅과 권한은 반드시 지켜지게 강제해요.</p>
+<div class="foot"><span>AI with Paul</span><span>30</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="마무리" data-title="오늘 배운 것 정리">
+  <p class="path">마무리</p>
+  <h1>오늘 배운 걸 이렇게 써 보세요</h1>
+  <table class="t mt" style="font-size:30px">
+    <thead><tr><th>배운 것</th><th>오늘 만든 것</th><th>이렇게도 써요</th></tr></thead>
+    <tbody>
+      <tr><td>프로젝트·지침</td><td>업무 자동화 프로젝트</td><td>보고서 양식, 메일 답장 말투</td></tr>
+      <tr><td>커넥터·스킬·예약</td><td>매일 관심 종목 카톡 알림</td><td>업계 뉴스, 경쟁사 소식 브리핑</td></tr>
+      <tr><td>어사이드</td><td>로그인한 사이트 대신 확인</td><td>메일 정리, 사내 시스템 확인</td></tr>
+      <tr><td>Artifacts</td><td>나만의 업무 도구</td><td>가계부, 일정 계산기, 체크리스트</td></tr>
+    </tbody>
+  </table>
+  <p class="mt" style="font-size:36px"><mark>기준은 스킬로, 연결은 커넥터로, 시간은 예약으로.</mark></p>
+<div class="foot"><span>AI with Paul</span><span>31</span></div></section></div>
+
+<div class="frame"><section class="slide" data-p="" data-section="마무리" data-title="질문과 마무리">
+  <p class="path">Q&amp;A</p>
+  <h1 style="font-size:120px;margin-top:40px">질문 받을게요</h1>
+  <p class="lead">예약은 2~3일 돌려 보세요. 멈추거나 궁금한 점이 생기면 편하게 물어봐 주세요.</p>
+  <div class="cols c2 mt-l">
+    <div class="card"><h3>프롬프트 다시 가져가기</h3><p class="small">이 주소 뒤에 <code>/prompts</code>를 붙이면 프롬프트 모음이 열려요.</p></div>
+    <div class="card"><h3>슬라이드 다시 보기</h3><p class="small">같은 주소에서 S 키를 누르면 스크롤로 훑어볼 수 있어요.</p></div>
+  </div>
+<div class="foot"><span>AI with Paul</span><span>32</span></div></section></div>
+<div class="frame"><section class="slide" data-p="" data-section="마무리" data-title="친구 추가와 후기">
+  <p class="path">마무리</p><h1 style="margin-top:10px">오늘 수고 많으셨어요</h1><p class="lead">휴대폰 카메라로 찍어 주세요. 마지막으로 두 가지만 부탁드려요.</p><div style="display:flex;gap:48px;justify-content:center;margin-top:36px"><div style="flex:1;max-width:520px;background:#fff;border:2px solid #e4e7ec;border-radius:36px;padding:40px 40px 36px;text-align:center"><div style="width:300px;margin:0 auto"><svg style="width:100%;height:auto;display:block" width="296" height="296" class="segno"><g transform="scale(8)"><path fill="#fff" d="M0 0h37v37h-37z"/><path class="qrline" stroke="#14213f" d="M2 2.5h7m2 0h1m4 0h1m1 0h1m1 0h3m2 0h2m1 0h7m-33 1h1m5 0h1m2 0h4m2 0h2m1 0h1m3 0h1m3 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m2 0h1m3 0h1m2 0h4m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h2m5 0h1m5 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h3m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h3m1 0h2m4 0h1m3 0h1m3 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h1m1 0h1m5 0h1m3 0h2m2 0h1m-25 1h1m1 0h5m3 0h4m3 0h1m2 0h1m1 0h1m3 0h5m-30 1h2m2 0h1m1 0h2m3 0h2m2 0h2m1 0h2m2 0h1m2 0h2m1 0h2m1 0h1m-33 1h2m3 0h2m2 0h2m1 0h4m1 0h1m3 0h2m2 0h2m1 0h1m1 0h2m-30 1h1m2 0h1m4 0h4m2 0h3m2 0h6m1 0h4m-32 1h1m1 0h1m3 0h2m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m2 0h3m2 0h1m-33 1h3m2 0h1m1 0h1m3 0h1m1 0h1m1 0h1m2 0h4m1 0h1m2 0h1m2 0h1m1 0h2m-32 1h3m1 0h2m1 0h1m1 0h2m3 0h2m4 0h1m3 0h3m3 0h1m-31 1h3m1 0h1m3 0h3m3 0h1m3 0h8m2 0h2m-30 1h1m2 0h5m1 0h2m1 0h3m1 0h1m1 0h1m2 0h2m1 0h1m1 0h2m3 0h1m-33 1h5m2 0h1m2 0h1m3 0h1m3 0h4m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h2m3 0h2m1 0h3m1 0h1m1 0h3m1 0h1m3 0h1m2 0h4m1 0h2m-32 1h4m3 0h2m2 0h1m1 0h2m1 0h1m3 0h2m2 0h7m-29 1h1m2 0h2m1 0h5m5 0h1m3 0h1m1 0h2m2 0h2m1 0h2m-33 1h3m1 0h2m3 0h2m1 0h1m2 0h3m1 0h2m1 0h2m2 0h1m5 0h1m-33 1h1m4 0h2m1 0h5m7 0h2m6 0h2m1 0h1m-32 1h1m2 0h3m2 0h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h3m1 0h3m1 0h3m-31 1h1m3 0h4m2 0h2m2 0h1m2 0h2m1 0h1m1 0h1m1 0h6m1 0h1m-24 1h2m2 0h1m1 0h1m1 0h7m1 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m2 0h1m2 0h1m2 0h3m2 0h1m2 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h1m1 0h1m3 0h1m2 0h2m2 0h1m1 0h2m3 0h5m-33 1h1m1 0h3m1 0h1m1 0h4m3 0h2m2 0h1m2 0h1m1 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h1m3 0h1m1 0h5m2 0h2m2 0h1m1 0h3m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h6m2 0h1m1 0h2m2 0h2m1 0h1m-30 1h1m5 0h1m2 0h1m2 0h1m2 0h1m2 0h1m2 0h2m3 0h1m1 0h1m1 0h1m-31 1h7m1 0h2m2 0h2m1 0h1m1 0h1m1 0h1m2 0h6m3 0h1"/></g></svg></div><h3 style="margin:28px 0 0;font-size:38px;letter-spacing:-.02em">카톡 채널 친구 추가</h3><p style="margin:12px 0 0;font-size:24px;line-height:1.5;color:#6b7280">수업 뒤 질문, 다음 수업 소식을 여기로 보내 드려요</p></div><div style="flex:1;max-width:520px;background:#fff;border:2px solid #e4e7ec;border-radius:36px;padding:40px 40px 36px;text-align:center"><div style="width:300px;margin:0 auto"><svg style="width:100%;height:auto;display:block" width="296" height="296" class="segno"><g transform="scale(8)"><path fill="#fff" d="M0 0h37v37h-37z"/><path class="qrline" stroke="#14213f" d="M2 2.5h7m3 0h2m1 0h1m2 0h1m1 0h3m2 0h2m1 0h7m-33 1h1m5 0h1m1 0h1m1 0h9m1 0h5m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h5m1 0h1m1 0h2m3 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m4 0h1m3 0h1m1 0h3m1 0h2m3 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m5 0h3m1 0h1m2 0h3m2 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-23 1h2m2 0h5m1 0h1m-20 1h3m1 0h2m6 0h1m1 0h4m1 0h2m2 0h1m5 0h2m-32 1h1m1 0h1m1 0h1m3 0h1m4 0h1m2 0h1m2 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h1m1 0h2m2 0h1m1 0h5m1 0h1m1 0h1m1 0h1m1 0h1m1 0h4m1 0h3m1 0h2m-32 1h1m1 0h2m3 0h2m1 0h2m2 0h2m1 0h2m2 0h2m2 0h2m1 0h1m1 0h2m-32 1h1m1 0h6m5 0h1m3 0h2m2 0h1m2 0h1m1 0h3m1 0h2m-33 1h2m2 0h1m5 0h3m1 0h1m1 0h1m2 0h1m4 0h1m4 0h1m1 0h1m-31 1h3m1 0h2m1 0h4m2 0h2m2 0h2m2 0h1m1 0h1m1 0h1m2 0h2m-30 1h2m2 0h1m1 0h1m5 0h5m1 0h9m1 0h2m-30 1h4m1 0h2m1 0h2m2 0h3m1 0h2m1 0h3m1 0h3m1 0h3m-29 1h1m1 0h1m3 0h2m3 0h1m1 0h3m2 0h7m1 0h2m1 0h2m-31 1h2m1 0h3m5 0h4m1 0h1m3 0h1m2 0h4m1 0h1m-28 1h2m3 0h3m1 0h6m4 0h2m2 0h1m1 0h1m3 0h1m-32 1h2m2 0h2m3 0h4m2 0h7m4 0h1m1 0h2m1 0h1m-33 1h1m3 0h2m4 0h2m2 0h3m2 0h2m2 0h1m2 0h1m2 0h1m2 0h1m-29 1h4m1 0h1m1 0h1m3 0h2m6 0h1m2 0h3m1 0h3m-32 1h5m1 0h3m3 0h1m1 0h2m1 0h3m2 0h2m1 0h1m4 0h2m-33 1h1m5 0h2m1 0h3m1 0h2m5 0h1m1 0h7m2 0h2m-25 1h1m2 0h2m1 0h2m2 0h2m1 0h4m3 0h2m-30 1h7m2 0h1m1 0h2m1 0h1m4 0h3m1 0h2m1 0h1m1 0h1m-29 1h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m4 0h4m3 0h4m-32 1h1m1 0h3m1 0h1m2 0h3m2 0h2m2 0h11m1 0h3m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m6 0h1m1 0h4m-33 1h1m1 0h3m1 0h1m1 0h4m1 0h1m1 0h3m4 0h2m2 0h2m-28 1h1m5 0h1m1 0h4m1 0h4m2 0h2m1 0h3m2 0h2m3 0h1m-33 1h7m2 0h1m1 0h1m2 0h1m3 0h2m1 0h1m1 0h1m4 0h1m1 0h1"/></g></svg></div><h3 style="margin:28px 0 0;font-size:38px;letter-spacing:-.02em">후기 남기기</h3><p style="margin:12px 0 0;font-size:24px;line-height:1.5;color:#6b7280">30초면 돼요. 다음에 오실 분들께 큰 도움이 돼요</p></div></div><p class="sub" style="margin-top:22px;text-align:center">카카오톡 채널 “에이아이위드폴” · class.aiwithpaul.co.kr</p>
+<div class="foot"><span>AI with Paul</span><span>33</span></div></section></div>
+</main>
+<button class="edge l" id="edge-l" aria-label="이전 슬라이드"></button>
+<button class="edge r" id="edge-r" aria-label="다음 슬라이드"></button>
+<nav id="hud" aria-label="슬라이드 이동">
+  <button id="btn-prev" aria-label="이전">이전</button>
+  <span class="pos" id="pos" aria-live="polite"></span>
+  <button id="btn-next" aria-label="다음">다음</button>
+  <button id="btn-toc" aria-label="목차 열기">목차</button>
+  <button id="btn-mode" aria-label="보기 방식 바꾸기">스크롤</button>
+</nav>
+<div id="toc" role="dialog" aria-label="목차"><div class="panel"><strong style="font-size:20px">목차</strong></div></div>
+<div id="toast" role="status"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
